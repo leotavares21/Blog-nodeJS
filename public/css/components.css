@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* variaveis de cores */
+/* variaveis de espaço */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  height: 10vh;
+}
+
+.container .navbar {
+  display: flex;
+  align-items: center;
+}
+.container .navbar .navbar-logo img {
+  width: 4.06em;
+  height: auto;
+}
+.container .navbar .navbar-content {
+  display: flex;
+  margin: 0 auto;
+}
+.container .navbar .navbar-content .item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #919192;
+  font-weight: bold;
+  padding: 0 1.25em;
+}
+
+/*# sourceMappingURL=components.css.map */

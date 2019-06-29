@@ -1,0 +1,30 @@
+@import "settings";
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+header{
+    height: 10vh;
+}
+.container {
+    .navbar{
+        display: flex;
+        align-items: center;
+    }
+    .navbar .navbar-logo img{
+        width: 4.06em; 
+        height: auto;
+    }
+    .navbar .navbar-content{
+        display: flex;
+        margin: 0 auto;
+    }
+    .navbar .navbar-content .item a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $gray;
+        font-weight: bold;
+        padding: 0 $large;
+    }
+}
