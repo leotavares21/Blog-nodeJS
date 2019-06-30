@@ -28,6 +28,9 @@ header{
 
 .carousel-container{
     position: relative;
+    .carousel-img img{
+        padding: 0;
+    }
     .carousel-content{
         color: $white;
         position: absolute;
@@ -58,12 +61,12 @@ header{
     background-color: $light-gray;
     padding: 0;
 }
-
 .posts-container{
     .post-content{
         position: relative;
         text-align: center;    
         border-bottom: 1px dashed #ccc;  
+        margin: 0;
         padding-bottom: $large;  
     }
     .post-content img{
@@ -103,3 +106,41 @@ header{
         margin-left: $small;
     }
 }
+
+/* aside */
+
+.aside-container{
+    .aside-content .aside-post{
+        clear: both;
+    }
+    .aside-content .aside-title{
+       color: $orange;
+       text-transform: uppercase;
+       padding-left: $very-small;
+       padding-bottom: $medium;
+       margin-top: $medium;
+       margin-bottom: $extreme-large;
+       border-bottom: 1.5px solid $orange;
+    }
+    .aside-content .aside-post img{
+        float: left;
+        margin-bottom: $medium;
+    }
+    .aside-content .aside-post .post-info{
+        margin-top: $very-small;
+        float: right;
+        width: 60%;
+    }
+    .aside-content .aside-post .post-info li{
+        color: $gray;
+        display: inline-block;
+        font-size: 0.8em;
+        padding: 0 2px;
+    }
+    .aside-content .popular-title{
+        margin-top: $small;
+        float: right;
+        width: 55%;
+    }
+}
+

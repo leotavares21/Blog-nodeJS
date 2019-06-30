@@ -30,6 +30,9 @@ header {
 .carousel-container {
   position: relative;
 }
+.carousel-container .carousel-img img {
+  padding: 0;
+}
 .carousel-container .carousel-content {
   color: #fff;
   position: absolute;
@@ -63,6 +66,7 @@ header {
   position: relative;
   text-align: center;
   border-bottom: 1px dashed #ccc;
+  margin: 0;
   padding-bottom: 1.25em;
 }
 .posts-container .post-content img {
@@ -101,6 +105,40 @@ header {
   background-size: contain;
   background-image: url("/images/right-arrow.png");
   margin-left: 0.6em;
+}
+
+/* aside */
+.aside-container .aside-content .aside-post {
+  clear: both;
+}
+.aside-container .aside-content .aside-title {
+  color: #ff4141;
+  text-transform: uppercase;
+  padding-left: 0.3em;
+  padding-bottom: 0.9em;
+  margin-top: 0.9em;
+  margin-bottom: 2.5em;
+  border-bottom: 1.5px solid #ff4141;
+}
+.aside-container .aside-content .aside-post img {
+  float: left;
+  margin-bottom: 0.9em;
+}
+.aside-container .aside-content .aside-post .post-info {
+  margin-top: 0.3em;
+  float: right;
+  width: 60%;
+}
+.aside-container .aside-content .aside-post .post-info li {
+  color: #919192;
+  display: inline-block;
+  font-size: 0.8em;
+  padding: 0 2px;
+}
+.aside-container .aside-content .popular-title {
+  margin-top: 0.6em;
+  float: right;
+  width: 55%;
 }
 
 /*# sourceMappingURL=components.css.map */
