@@ -1,0 +1,7 @@
+// post-info 
+@import 'settings';
+
+@mixin info-spacing{
+    margin: 0 $medium;
+    display: inline-block;
+}

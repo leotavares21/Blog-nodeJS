@@ -1,9 +1,6 @@
 @import "settings";
+@import "tools";
 
-.container{
-    width: 80%;
-    margin: 0 auto;
-}
 header{
     height: 10vh;
 }
@@ -21,10 +18,88 @@ header{
         margin: 0 auto;
     }
     .navbar .navbar-content .item a{
-        text-decoration: none;
         text-transform: uppercase;
         color: $gray;
         font-weight: bold;
         padding: 0 $large;
+    }
+}
+/* carousel */
+
+.carousel-container{
+    position: relative;
+    .carousel-content{
+        color: $white;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    .carousel-content .carousel-btn{
+        border: none;
+        color: $white;
+        font-size: 1.1em;
+        margin-bottom: $medium; 
+    
+    }
+    .carousel-content .carousel-title{
+        font-size: 2em;
+        margin-bottom: $small;
+    }
+
+    .carousel-content .post-info li{
+        @include info-spacing;
+    }
+}
+
+/* posts */
+.posts-container, .aside-container{
+    background-color: $light-gray;
+    padding: 0;
+}
+
+.posts-container{
+    .post-content{
+        position: relative;
+        text-align: center;    
+        border-bottom: 1px dashed #ccc;  
+        padding-bottom: $large;  
+    }
+    .post-content img{
+        margin-top: $very-large;
+        padding: 0;
+    }
+    .post-content .post-title{
+       font-size: 1.4em;
+       color: $title-gray;
+       margin-top: $medium;
+    }
+    .post-content .post-description{
+        margin-top: $large;
+        color: $text-gray;
+    }
+    .post-content .post-info{
+        margin-top: $medium;
+        color: $gray;
+    }
+    .post-content .post-info li{
+        @include info-spacing;
+    }
+    .post-content .read-more{
+        text-transform: uppercase;
+        color: $orange;
+        margin-top: $extreme-large;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .post-content .read-more::after{
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: auto;
+        background-size: contain;
+        background-image: url("/images/right-arrow.png");
+        margin-left: $small;
     }
 }

@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import 'settings';
 
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
+    height: 4000px;
 }
-
+a{
+    text-decoration: none;
+}
+button{
+    padding: $small $super-large;
+    border-radius: $very-small; 
+    background-color: $orange;
+    cursor: pointer;
+}
 
