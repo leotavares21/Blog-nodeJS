@@ -11,8 +11,9 @@ a{
     text-decoration: none;
 }
 button{
-    padding: $small $super-large;
+    color: $white;
     border-radius: $very-small; 
+    border: none;
     background-color: $orange;
     cursor: pointer;
 }

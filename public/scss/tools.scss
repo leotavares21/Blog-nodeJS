@@ -5,3 +5,12 @@
     margin: 0 $medium;
     display: inline-block;
 }
+@mixin info-aside{
+    margin-top: $very-small;
+}
+@mixin info-aside-li{
+    display: inline-block;
+    color: $gray;
+    font-size: 0.8em;
+    padding-right: 2px;
+}

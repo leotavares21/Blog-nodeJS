@@ -2,7 +2,7 @@
 @import "tools";
 
 header{
-    height: 10vh;
+    min-height: $extreme-large;
 }
 .container {
     .navbar{
@@ -40,11 +40,9 @@ header{
         text-align: center;
     }
     .carousel-content .carousel-btn{
-        border: none;
-        color: $white;
         font-size: 1.1em;
         margin-bottom: $medium; 
-    
+        padding: $small $very-large;
     }
     .carousel-content .carousel-title{
         font-size: 2em;
@@ -56,7 +54,7 @@ header{
     }
 }
 
-/* posts */
+/* posts articles*/
 .posts-container, .aside-container{
     background-color: $light-gray;
     padding: 0;
@@ -92,7 +90,7 @@ header{
     .post-content .read-more{
         text-transform: uppercase;
         color: $orange;
-        margin-top: $extreme-large;
+        margin-top: $super-large;
         display: flex;
         justify-content: flex-end;
     }
@@ -107,40 +105,153 @@ header{
     }
 }
 
-/* aside */
-
+/* aside posts */
 .aside-container{
-    .aside-content .aside-post{
+    .aside-content{
         clear: both;
     }
     .aside-content .aside-title{
-       color: $orange;
-       text-transform: uppercase;
-       padding-left: $very-small;
-       padding-bottom: $medium;
-       margin-top: $medium;
-       margin-bottom: $extreme-large;
-       border-bottom: 1.5px solid $orange;
+        color: $orange;
+        text-transform: uppercase;
+        padding-left: $very-small;
+        padding-bottom: $medium;
+        margin-top: $large;
+        margin-bottom: $super-large;
+        border-bottom: 1.5px solid $orange;
+    }
+    .aside-content .aside-post{
+        clear: both;
     }
     .aside-content .aside-post img{
-        float: left;
         margin-bottom: $medium;
-    }
-    .aside-content .aside-post .post-info{
-        margin-top: $very-small;
-        float: right;
-        width: 60%;
-    }
-    .aside-content .aside-post .post-info li{
-        color: $gray;
-        display: inline-block;
-        font-size: 0.8em;
-        padding: 0 2px;
+        padding: 0;
+        float: left;
     }
     .aside-content .popular-title{
-        margin-top: $small;
+        margin-top: $very-small;
         float: right;
-        width: 55%;
+    }
+    .aside-content .aside-post .post-info{
+        @include info-aside;
+        float: right;
+    }
+    .aside-content .aside-post .post-info li{
+        @include info-aside-li;
     }
 }
 
+/* aside pics */
+
+.our-pics {
+    padding-top: $small;
+}
+.aside-container{
+    .aside-content .aside-pic{
+        margin-top: $super-large;
+    }
+    .aside-content .aside-pic .pic-img{
+        position: relative;
+    }
+    .aside-content .aside-pic .pic-img img{
+        padding: 0;
+    }
+    .aside-content .pic-img .btn-pics{
+        font-size: 0.8em;
+        padding: $small $large;
+        position: absolute;
+        top: 0;
+        margin: $medium;
+    }
+    .aside-content .aside-pic .pic-title{
+        padding-left: 0;
+        margin-top: $small;
+        color: $title-gray;
+    }
+    .aside-content .aside-pic .post-info{
+        @include info-aside;
+        padding: 0;
+    }
+    .aside-content .aside-pic .post-info li{
+        @include info-aside-li;
+    }
+}
+
+/* aside categorias */
+.categorias{
+    padding-top: $large;
+}
+.aside-container {
+    .categorias .aside-title{
+        margin-bottom: $medium;
+    }
+    .aside-content .aside-cate .cate-item{
+        padding: $medium 0;
+        border-bottom: 1.5px dashed #ccc;
+    }
+    .aside-content .aside-cate .cate-item a{
+        color: $title-gray;
+    }
+    .aside-content .aside-cate .cate-num{
+        margin-left: $very-large;
+    }
+}
+
+/* random post */
+.aside-container {
+    .random-post .aside-title{
+        margin-top: $extreme-large;
+    }
+}
+
+/* tags */
+.tags-list{
+    margin-top: $extreme-large;
+}
+.aside-container{
+    .aside-content .aside-tags{
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .aside-content .aside-tags .tag{
+        font-size: 0.8em;
+        background-color: #e8e8e8;
+        color: $text-gray;
+        border-radius: $very-small;
+        margin: $very-small;
+        padding: $small $large;
+        
+    }
+}
+
+/* survey */
+.survey-content{
+    margin-top: $extreme-large;
+}
+.aside-container{
+    .aside-content .survey-title{
+        margin-bottom: $large;
+        color: $title-gray;
+        font-size: 1.2em;
+    }
+    .aside-content .survey-wrap{
+       display: block;
+       margin-top: $small;
+    }
+    .aside-content .survey-wrap input{
+       margin-left: 0;
+       width: 1.2em;
+       height: 1.2em;
+    }
+    .aside-content .btn-survey{
+       padding: $small $super-large;
+       margin-top: $very-large;
+    }
+    .aside-content .survey-result{
+        display: block;
+        text-align: center;
+        color: $black;
+    }
+}

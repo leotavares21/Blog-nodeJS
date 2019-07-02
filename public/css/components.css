@@ -4,7 +4,7 @@
 /* variaveis de cores */
 /* variaveis de espaço */
 header {
-  height: 10vh;
+  min-height: 2.5em;
 }
 
 .container .navbar {
@@ -42,10 +42,9 @@ header {
   text-align: center;
 }
 .carousel-container .carousel-content .carousel-btn {
-  border: none;
-  color: #fff;
   font-size: 1.1em;
   margin-bottom: 0.9em;
+  padding: 0.6em 1.56em;
 }
 .carousel-container .carousel-content .carousel-title {
   font-size: 2em;
@@ -56,7 +55,7 @@ header {
   display: inline-block;
 }
 
-/* posts */
+/* posts articles*/
 .posts-container, .aside-container {
   background-color: #f8f8f8;
   padding: 0;
@@ -93,7 +92,7 @@ header {
 .posts-container .post-content .read-more {
   text-transform: uppercase;
   color: #ff4141;
-  margin-top: 2.5em;
+  margin-top: 1.87em;
   display: flex;
   justify-content: flex-end;
 }
@@ -107,8 +106,8 @@ header {
   margin-left: 0.6em;
 }
 
-/* aside */
-.aside-container .aside-content .aside-post {
+/* aside posts */
+.aside-container .aside-content {
   clear: both;
 }
 .aside-container .aside-content .aside-title {
@@ -116,29 +115,142 @@ header {
   text-transform: uppercase;
   padding-left: 0.3em;
   padding-bottom: 0.9em;
-  margin-top: 0.9em;
-  margin-bottom: 2.5em;
+  margin-top: 1.25em;
+  margin-bottom: 1.87em;
   border-bottom: 1.5px solid #ff4141;
 }
+.aside-container .aside-content .aside-post {
+  clear: both;
+}
 .aside-container .aside-content .aside-post img {
-  float: left;
   margin-bottom: 0.9em;
+  padding: 0;
+  float: left;
+}
+.aside-container .aside-content .popular-title {
+  margin-top: 0.3em;
+  float: right;
 }
 .aside-container .aside-content .aside-post .post-info {
   margin-top: 0.3em;
   float: right;
-  width: 60%;
 }
 .aside-container .aside-content .aside-post .post-info li {
-  color: #919192;
   display: inline-block;
+  color: #919192;
   font-size: 0.8em;
-  padding: 0 2px;
+  padding-right: 2px;
 }
-.aside-container .aside-content .popular-title {
+
+/* aside pics */
+.our-pics {
+  padding-top: 0.6em;
+}
+
+.aside-container .aside-content .aside-pic {
+  margin-top: 1.87em;
+}
+.aside-container .aside-content .aside-pic .pic-img {
+  position: relative;
+}
+.aside-container .aside-content .aside-pic .pic-img img {
+  padding: 0;
+}
+.aside-container .aside-content .pic-img .btn-pics {
+  font-size: 0.8em;
+  padding: 0.6em 1.25em;
+  position: absolute;
+  top: 0;
+  margin: 0.9em;
+}
+.aside-container .aside-content .aside-pic .pic-title {
+  padding-left: 0;
   margin-top: 0.6em;
-  float: right;
-  width: 55%;
+  color: #4d4f5c;
+}
+.aside-container .aside-content .aside-pic .post-info {
+  margin-top: 0.3em;
+  padding: 0;
+}
+.aside-container .aside-content .aside-pic .post-info li {
+  display: inline-block;
+  color: #919192;
+  font-size: 0.8em;
+  padding-right: 2px;
+}
+
+/* aside categorias */
+.categorias {
+  padding-top: 1.25em;
+}
+
+.aside-container .categorias .aside-title {
+  margin-bottom: 0.9em;
+}
+.aside-container .aside-content .aside-cate .cate-item {
+  padding: 0.9em 0;
+  border-bottom: 1.5px dashed #ccc;
+}
+.aside-container .aside-content .aside-cate .cate-item a {
+  color: #4d4f5c;
+}
+.aside-container .aside-content .aside-cate .cate-num {
+  margin-left: 1.56em;
+}
+
+/* random post */
+.aside-container .random-post .aside-title {
+  margin-top: 2.5em;
+}
+
+/* tags */
+.tags-list {
+  margin-top: 2.5em;
+}
+
+.aside-container .aside-content .aside-tags {
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.aside-container .aside-content .aside-tags .tag {
+  font-size: 0.8em;
+  background-color: #e8e8e8;
+  color: #7c7c91;
+  border-radius: 0.3em;
+  margin: 0.3em;
+  padding: 0.6em 1.25em;
+}
+
+/* survey */
+.survey-content {
+  margin-top: 2.5em;
+}
+
+.aside-container .aside-content .survey-title {
+  margin-bottom: 1.25em;
+  color: #4d4f5c;
+  font-size: 1.2em;
+}
+.aside-container .aside-content .survey-wrap {
+  display: block;
+  margin-top: 0.6em;
+}
+.aside-container .aside-content .survey-wrap input {
+  margin-left: 0;
+  width: 1.2em;
+  height: 1.2em;
+}
+.aside-container .aside-content .btn-survey {
+  padding: 0.6em 1.87em;
+  margin-top: 1.56em;
+}
+.aside-container .aside-content .survey-result {
+  display: block;
+  text-align: center;
+  color: #000;
 }
 
 /*# sourceMappingURL=components.css.map */
