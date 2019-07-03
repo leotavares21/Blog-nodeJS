@@ -14,11 +14,36 @@ a {
 }
 
 button {
-  color: #fff;
   border-radius: 0.3em;
   border: none;
-  background-color: #ff4141;
   cursor: pointer;
+}
+
+.btn-orange {
+  background-color: #ff4141;
+  color: #fff;
+}
+
+.btn-shape {
+  padding: 0.6em 0.9em;
+}
+
+.alert {
+  padding: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: #D5FFDC;
+  color: darkgreen;
+  border: 1px solid darkgreen;
+}
+
+.alert-error {
+  background-color: #FFD5D5;
+  color: darkred;
+  border: 1px solid darkred;
 }
 
 /*# sourceMappingURL=base.css.map */

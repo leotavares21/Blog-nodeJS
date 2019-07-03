@@ -1,0 +1,8 @@
+{{#if success_msg}}
+    {{!-- estou pegando os valores das variaveis globais que eu defini arquivo app.js --}}
+    <div class="alert alert-success">{{success_msg}}</div>
+ {{/if}}
+
+ {{#if error_msg}}
+    <div class="alert alert-error">{{error_msg}}</div>
+ {{/if}}

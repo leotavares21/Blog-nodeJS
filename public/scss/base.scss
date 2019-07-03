@@ -11,10 +11,33 @@ a{
     text-decoration: none;
 }
 button{
-    color: $white;
     border-radius: $very-small; 
     border: none;
-    background-color: $orange;
     cursor: pointer;
+}
+// classes de conteudo de criação servidor
+
+.btn-orange{
+    background-color: $orange;
+    color: $white;
+}
+.btn-shape{
+    padding: $small $medium;
+}
+
+.alert{
+    padding: $medium;
+    margin-bottom: $medium;
+    border-radius: 5px;
+}
+.alert-success{
+    background-color: #D5FFDC;
+    color: darkgreen;
+    border: 1px solid darkgreen;
+}
+.alert-error{
+    background-color: #FFD5D5;
+    color: darkred;
+    border: 1px solid darkred;
 }
 
