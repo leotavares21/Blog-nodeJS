@@ -19,31 +19,36 @@ button {
   cursor: pointer;
 }
 
-.btn-orange {
-  background-color: #ff4141;
-  color: #fff;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
 }
 
-.btn-shape {
-  padding: 0.6em 0.9em;
+h1 {
+  font-size: 2em;
 }
 
-.alert {
-  padding: 0.9em;
-  margin-bottom: 0.9em;
-  border-radius: 5px;
+h2 {
+  font-size: 1.9em;
 }
 
-.alert-success {
-  background-color: #D5FFDC;
-  color: darkgreen;
-  border: 1px solid darkgreen;
+h3 {
+  font-size: 1.8em;
 }
 
-.alert-error {
-  background-color: #FFD5D5;
-  color: darkred;
-  border: 1px solid darkred;
+h4 {
+  font-size: 1.7em;
+}
+
+h5 {
+  font-size: 1.6em;
+}
+
+h6 {
+  font-size: 1.5em;
+}
+
+small {
+  font-size: 0.9em;
 }
 
 /*# sourceMappingURL=base.css.map */

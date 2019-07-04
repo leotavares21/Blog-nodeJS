@@ -1,0 +1,89 @@
+@import "settings";
+@import "tools";
+
+// title 
+.orange-title{
+    font-size: 1em;
+    color: $orange;
+    text-transform: uppercase;
+    padding-left: $very-small;
+    padding-bottom: $medium;
+    border-bottom: 1.5px solid $orange;
+}
+.user-title{
+    padding-bottom: $very-small;
+    border-bottom: 1px dotted $text-gray;
+}
+// btn index
+.btn-orange{
+    background-color: $orange;
+    color: $white;
+}
+
+// btn user
+
+.btn{
+    display: block;
+    padding: $medium $large;
+    font-size: 1em;
+}
+.btn-edit{
+    background-color: $gray;
+    color: $white;
+}
+.btn-delete{
+    background-color: $black;
+    color: $white;
+}
+
+// alert 
+
+.alert{
+    padding: $medium;
+    margin-bottom: $medium;
+    border-radius: 5px;
+}
+.alert-success{
+    background-color: $light-green;
+    color: $dark-green;
+    border: 1px solid $dark-green;
+}
+.alert-error{
+    background-color: $light-red;
+    color: $dark-red;
+    border: 1px solid $dark-red;
+}
+
+// card 
+
+.card{
+    margin-top: $small;
+    margin-bottom: $very-large;
+    border-radius: $very-small;
+    border: 1px solid #ccc;
+}
+.card-content{
+    padding: $large;
+}
+
+// form 
+
+.form-label{
+    margin-bottom: $small;
+}
+.form-input{
+    border-radius: $very-small;
+    display: block;
+    width: 100%;
+    min-height: $extreme-large;
+    border: 1px solid #ccc;
+    margin-bottom: $small;
+    padding-left: $very-small;
+}
+
+// texts small 
+
+.info-text{
+    display: block;
+    color: $title-gray;
+}

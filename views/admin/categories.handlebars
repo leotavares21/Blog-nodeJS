@@ -1,23 +1,21 @@
 <div class="container mt-4">
-    <h2>Lista de categorias:</h2>
-    <hr>
-    <a href="/admin/categorias/add"><button class="btn-shape btn-orange">Nova Categoria</button></a>
+    <h2 class="user-title">Lista de categorias:</h2>
+    
+    <a href="/admin/categorias/add"><button class="btn btn-orange mt-4 mb-2">Nova Categoria</button></a>
 
     {{#each categories}}
-        <div class="">
-            <div class="">
-                <br>
-                <h4>{{name}}</h4>
-                <small>Slug: {{slug}}</small><br>
-                <small>Data de criação: {{date}} </small>
-                <br>
-                <br>
-                <a href="/admin/categorias/edit/{{_id}}"><button class="btn-shape">Editar Categoria</button></a>
-                <br>
-                <br>
+        <div class="card">
+            <div class="card-content">
+                <h4 class="mb-3" style="color: #ff4141">{{name}}</h4>
+
+                <small class="info-text mb-1">Slug: {{slug}}</small>
+                <small class="info-text mb-2">Data de criação: {{date}} </small>
+
+                <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-edit mt-2">Editar Categoria</button></a>
+
                     <form action="/admin/categorias/deletar" method="POST">
                         <input type="hidden" name="id" value="{{_id}}">
-                        <button type="submit" class="btn-shape" style="background-color: lightblue">Deletar Categoria</button>
+                        <button type="submit" class="btn btn-delete mt-2">Deletar Categoria</button>
                     </form>
             </div>
         </div>

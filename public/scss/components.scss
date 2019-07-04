@@ -1,6 +1,7 @@
 @import "settings";
 @import "tools";
 
+
 header{
     min-height: $extreme-large;
 }
@@ -77,6 +78,7 @@ header{
        margin-top: $medium;
     }
     .post-content .post-description{
+        font-size: 1em;
         margin-top: $large;
         color: $text-gray;
     }
@@ -110,14 +112,9 @@ header{
     .aside-content{
         clear: both;
     }
-    .aside-content .aside-title{
-        color: $orange;
-        text-transform: uppercase;
-        padding-left: $very-small;
-        padding-bottom: $medium;
+    .aside-content .orange-title{
         margin-top: $large;
         margin-bottom: $super-large;
-        border-bottom: 1.5px solid $orange;
     }
     .aside-content .aside-post{
         clear: both;
@@ -128,6 +125,7 @@ header{
         float: left;
     }
     .aside-content .popular-title{
+        font-size: 1em;
         margin-top: $very-small;
         float: right;
     }
@@ -163,6 +161,7 @@ header{
         margin: $medium;
     }
     .aside-content .aside-pic .pic-title{
+        font-size: 1em;
         padding-left: 0;
         margin-top: $small;
         color: $title-gray;
@@ -181,7 +180,7 @@ header{
     padding-top: $large;
 }
 .aside-container {
-    .categorias .aside-title{
+    .categorias .orange-title{
         margin-bottom: $medium;
     }
     .aside-content .aside-cate .cate-item{
@@ -198,7 +197,7 @@ header{
 
 /* random post */
 .aside-container {
-    .random-post .aside-title{
+    .random-post .orange-title{
         margin-top: $extreme-large;
     }
 }
@@ -255,3 +254,4 @@ header{
         color: $black;
     }
 }
+

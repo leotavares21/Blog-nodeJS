@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <h2 class="user-title">Lista de postagens:</h2>
+    
+    <a href="/admin/postagens/add"><button class="btn btn-orange mt-4">Nova postagem</button></a><br><br>
+
+    {{#each posts}}
+        <div class="card">
+            <div class="card-content">
+                <h4 class="mb-3" style="color: #ff4141">{{title}}</h4>
+
+                <p class="mb-2">Descrição: {{description}}</p>
+
+                <small class="info-text mb-1">Data: {{date}}</small>
+                <small class="info-text mb-2">Categoria: {{category.name}}</small>
+
+                <a href="/admin/postagens/edit/{{_id}}"><button class="btn btn-edit mb-2">Editar postagem</button></a>
+
+                <form action="/admin/postagens/deletar" method="POST">
+                        <input type="hidden" name="id" value="{{_id}}">
+                        <button type="submit" class="btn btn-delete mt-2">Deletar postagem</button>
+                </form>
+             
+            </div>
+        </div>
+    {{else}}
+        <h5><mark>Nenhuma postagem registrada.</mark></h5>
+    {{/each}}
+</div>

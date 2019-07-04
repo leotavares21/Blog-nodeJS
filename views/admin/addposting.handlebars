@@ -1,0 +1,43 @@
+<div class="container">
+
+    {{#each erros}}
+        <div class="alert alert-error">{{msg}}</div>
+    {{else}}
+
+    {{/each}}
+    <h3 class="user-title">Criar postagem:</h3>
+
+    <div class="card mt-4">
+        <div class="card-content">
+
+                <form action="/admin/postagens/nova" method="POST">
+
+                    <label for="titulo" class="form-label">Título: </label>
+                        <input type="text" name="titulo" class="form-input" required>
+
+                    <label for="slug" class="form-label">Slug: </label>
+                        <input type="text" name="slug" class="form-input" required>
+
+                    <label for="descricao" class="form-label">Descrição: </label>
+                        <input type="text" name="descricao" class="form-input" required>
+
+                    <label for="conteudo" class="form-label">Conteudo: </label>
+                        <textarea name="conteudo" class="form-input" rows="5" required></textarea>
+
+                    <label for="categoria" class="form-label">Categoria: </label>
+                    <select name="categoria" class="form-input">
+                        {{#each categories}}
+                        {{!-- passando um for em cada categoria que eu peguei la na rota do arquivo admin.js --}}
+                        {{!-- utilizando os ddos recebidos da colletion postagens --}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{else}}
+                            <option value="0">Nenhuma categoria registrada</option>
+                        {{/each}}
+                    </select>
+
+                    <button class="btn btn-orange mt-4" type="submit">Criar postagem</button>
+                </form>
+        </div>
+    </div>
+
+</div>

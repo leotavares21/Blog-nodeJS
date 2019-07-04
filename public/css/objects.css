@@ -1,3 +1,89 @@
+@charset "UTF-8";
+/* variaveis de cores */
+/* variaveis de espaço */
+/* variaveis de cores */
+/* variaveis de espaço */
+.orange-title {
+  font-size: 1em;
+  color: #ff4141;
+  text-transform: uppercase;
+  padding-left: 0.3em;
+  padding-bottom: 0.9em;
+  border-bottom: 1.5px solid #ff4141;
+}
 
+.user-title {
+  padding-bottom: 0.3em;
+  border-bottom: 1px dotted #7c7c91;
+}
+
+.btn-orange {
+  background-color: #ff4141;
+  color: #fff;
+}
+
+.btn {
+  display: block;
+  padding: 0.9em 1.25em;
+  font-size: 1em;
+}
+
+.btn-edit {
+  background-color: #919192;
+  color: #fff;
+}
+
+.btn-delete {
+  background-color: #333;
+  color: #fff;
+}
+
+.alert {
+  padding: 0.9em;
+  margin-bottom: 0.9em;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: #90EE90;
+  color: #134900;
+  border: 1px solid #134900;
+}
+
+.alert-error {
+  background-color: #F08080;
+  color: #710000;
+  border: 1px solid #710000;
+}
+
+.card {
+  margin-top: 0.6em;
+  margin-bottom: 1.56em;
+  border-radius: 0.3em;
+  border: 1px solid #ccc;
+}
+
+.card-content {
+  padding: 1.25em;
+}
+
+.form-label {
+  margin-bottom: 0.6em;
+}
+
+.form-input {
+  border-radius: 0.3em;
+  display: block;
+  width: 100%;
+  min-height: 2.5em;
+  border: 1px solid #ccc;
+  margin-bottom: 0.6em;
+  padding-left: 0.3em;
+}
+
+.info-text {
+  display: block;
+  color: #4d4f5c;
+}
 
 /*# sourceMappingURL=objects.css.map */

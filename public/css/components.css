@@ -78,6 +78,7 @@ header {
   margin-top: 0.9em;
 }
 .posts-container .post-content .post-description {
+  font-size: 1em;
   margin-top: 1.25em;
   color: #7c7c91;
 }
@@ -110,14 +111,9 @@ header {
 .aside-container .aside-content {
   clear: both;
 }
-.aside-container .aside-content .aside-title {
-  color: #ff4141;
-  text-transform: uppercase;
-  padding-left: 0.3em;
-  padding-bottom: 0.9em;
+.aside-container .aside-content .orange-title {
   margin-top: 1.25em;
   margin-bottom: 1.87em;
-  border-bottom: 1.5px solid #ff4141;
 }
 .aside-container .aside-content .aside-post {
   clear: both;
@@ -128,6 +124,7 @@ header {
   float: left;
 }
 .aside-container .aside-content .popular-title {
+  font-size: 1em;
   margin-top: 0.3em;
   float: right;
 }
@@ -164,6 +161,7 @@ header {
   margin: 0.9em;
 }
 .aside-container .aside-content .aside-pic .pic-title {
+  font-size: 1em;
   padding-left: 0;
   margin-top: 0.6em;
   color: #4d4f5c;
@@ -184,7 +182,7 @@ header {
   padding-top: 1.25em;
 }
 
-.aside-container .categorias .aside-title {
+.aside-container .categorias .orange-title {
   margin-bottom: 0.9em;
 }
 .aside-container .aside-content .aside-cate .cate-item {
@@ -199,7 +197,7 @@ header {
 }
 
 /* random post */
-.aside-container .random-post .aside-title {
+.aside-container .random-post .orange-title {
   margin-top: 2.5em;
 }
 
@@ -250,7 +248,7 @@ header {
 .aside-container .aside-content .survey-result {
   display: block;
   text-align: center;
-  color: #000;
+  color: #333;
 }
 
 /*# sourceMappingURL=components.css.map */
