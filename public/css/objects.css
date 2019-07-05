@@ -51,7 +51,7 @@
 }
 
 .alert-error {
-  background-color: #F08080;
+  background-color: #ef8e8e;
   color: #710000;
   border: 1px solid #710000;
 }
@@ -79,6 +79,15 @@
   border: 1px solid #ccc;
   margin-bottom: 0.6em;
   padding-left: 0.3em;
+}
+
+.post-wrap-img {
+  margin-bottom: 0.6em;
+}
+
+.post-wrap-img img {
+  max-width: 100px;
+  height: auto;
 }
 
 .info-text {

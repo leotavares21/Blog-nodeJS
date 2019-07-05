@@ -45,9 +45,10 @@ const app = express();
         app.engine('handlebars', handlebars({defaultLayout: 'main'}));
         app.set('view engine', 'handlebars');
 
-    // Public - chamando pasta de arquivos estaticos 
+    // Path - arquivos estaticos 
         app.use(express.static(path.join(__dirname, 'public')));
-
+        app.use(express.static(path.join(__dirname, 'uploads')));
+    
 
 // Rotas
     app.use('/admin', admin);

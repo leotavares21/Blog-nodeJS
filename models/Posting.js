@@ -18,6 +18,10 @@ const Posting = new Schema({
         type: String,
         required: true
     },
+    image:{
+        type: String,
+        required: false
+    },
     category: {
         type: Schema.Types.ObjectId,
         ref: 'categories',

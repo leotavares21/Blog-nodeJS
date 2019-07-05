@@ -80,6 +80,14 @@
     margin-bottom: $small;
     padding-left: $very-small;
 }
+// img post 
+.post-wrap-img{
+    margin-bottom: $small;
+}
+.post-wrap-img img{
+    max-width: 100px;
+    height: auto;
+}
 
 // texts small 
 

@@ -1,6 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads/files');
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    }
+});
+
+const upload = multer({ storage });
+
 
 // carregando models
     //Category
@@ -130,7 +143,7 @@ router.get('/postagens/add', (req,res) => {
     });
 });
 
-router.post('/postagens/nova', (req, res) => {
+router.post('/postagens/nova', upload.single('imagem'), (req, res) => {
 
     let erros = [];
 
@@ -145,18 +158,21 @@ router.post('/postagens/nova', (req, res) => {
             description: req.body.descricao,
             content: req.body.conteudo,
             category: req.body.categoria,
-            slug: req.body.slug
+            slug: req.body.slug,
+            image: req.file.originalname
         }
 
-        new Posting(newPosting).save().then(() => {
-            req.flash('success_msg', 'Postagem criada com sucesso!');
-            res.redirect('/admin/postagens');
-        }).catch((err) => {
-            req.flash('erro_msg', 'Houve um erro durante a criação da postagem');
-            res.redirect('/admin/postagens');
-        });
+            new Posting(newPosting).save().then(() => {
+                req.flash('success_msg', 'Postagem criada com sucesso!');
+                res.redirect('/admin/postagens');
+            }).catch((err) => {
+                req.flash('erro_msg', 'Houve um erro durante a criação da postagem');
+                res.redirect('/admin/postagens');
+            });
+        
     }  
 });
+
 
 router.get('/postagens/edit/:id', (req, res) => {
 
