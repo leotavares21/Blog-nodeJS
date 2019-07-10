@@ -27,13 +27,98 @@ header {
 }
 
 /* carousel */
-.carousel-container {
+.carousel-body {
+  display: none;
+}
+
+/* Caption text */
+.carousel-content {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.slide-container {
   position: relative;
 }
-.carousel-container .carousel-img img {
-  padding: 0;
+
+.dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0%;
 }
-.carousel-container .carousel-content {
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+  top: -30px;
+}
+
+.active {
+  background-color: #ff4141;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .carousel-content {
+    font-size: 11px;
+  }
+}
+.carousel-body {
+  position: relative;
+}
+.carousel-body .carousel-img img {
+  padding: 0;
+  width: 100vw;
+  height: 28em;
+  object-fit: cover;
+}
+.carousel-body .carousel-content {
   color: #fff;
   position: absolute;
   top: 50%;
@@ -41,16 +126,16 @@ header {
   transform: translateY(-50%);
   text-align: center;
 }
-.carousel-container .carousel-content .carousel-btn {
+.carousel-body .carousel-content .carousel-btn {
   font-size: 1.1em;
   margin-bottom: 0.9em;
   padding: 0.6em 1.56em;
 }
-.carousel-container .carousel-content .carousel-title {
+.carousel-body .carousel-content .carousel-title {
   font-size: 2em;
   margin-bottom: 0.6em;
 }
-.carousel-container .carousel-content .post-info li {
+.carousel-body .carousel-content .post-info li {
   margin: 0 0.9em;
   display: inline-block;
 }
@@ -69,8 +154,11 @@ header {
   padding-bottom: 1.25em;
 }
 .posts-container .post-content img {
+  height: 25em;
   margin-top: 1.56em;
   padding: 0;
+  object-fit: cover;
+  object-position: bottom right;
 }
 .posts-container .post-content .post-title {
   font-size: 1.4em;
@@ -152,6 +240,9 @@ header {
 }
 .aside-container .aside-content .aside-pic .pic-img img {
   padding: 0;
+  height: 12.5em;
+  object-fit: cover;
+  object-position: bottom right;
 }
 .aside-container .aside-content .pic-img .btn-pics {
   font-size: 0.8em;

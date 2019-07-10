@@ -1,36 +1,53 @@
-<div class="carousel-container">
-    <div class="row">
-        <div class="carousel-img">
-            <h1><img src="/images/Slide1.jpg" alt="Boo blog" class="col-12"></h1>
-        </div>
-            <div class="carousel-content col-5">
 
-                <button class="carousel-btn btn-orange">Hi-Tech</button>
+<div class="row">
+    <div class="slide-container">
 
-                <h2 class="carousel-title">Certainty listening no behaviour existence assurance situation</h2>
-                
-                <ul class="post-info">
-                    <li>Criador</li>
-                    <li>Data</li>
-                    <li>Comentarios</li>
-                    <li>Visitas</li>
-                </ul>
+        {{#each posts}}
+            <div class="carousel-body fade">
 
-            </div>   
+                <div class="carousel-img">
+                        <img src="/files/{{image}}" alt="Boo blog" class="col-12">
+                </div>
+
+                <div class="carousel-content col-5">
+                    <button class="carousel-btn btn-orange">{{category.name}}</button>
+
+                    <h2 class="carousel-title">{{title}}</h2>
+
+                    <ul class="post-info">
+                        <li>Criador</li>
+                        <li>Data</li>
+                        <li>Comentarios</li>
+                        <li>Visitas</li>
+                    </ul>
+
+                </div>
+            </div>
+        {{else}}
+
+        {{/each}}
+
+        <div class="dots">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
         </div>
     </div>
 </div>
-
+    
 <div class="container">
     <div class="row justify-content-around">
 
         <section class="posts-container col-12 col-sm-7">
 
+            {{#each posts}}
+
             <article class="post-content">
 
-                <img src="/images/post2.jpg" alt="" class="col-12">
+                <img src="/files/{{image}}" alt="{{title}}" class="col-12">
+                    <button class="p-2 mt-4 btn-orange">{{category.name}}</button>
 
-                    <h1 class="post-title">Certainty listening no behaviour existence assurance situation</h1>
+                    <h1 class="post-title">{{title}}</h1>
 
                     <ul class="post-info">
                             <li>Criador</li>
@@ -39,87 +56,16 @@
                             <li>Visitas</li>
                     </ul>
 
-                    <h2 class="post-description">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</h2>
+                    <h2 class="post-description">{{description}}</h2>
 
-                    <a href="" class="read-more">Ler mais</a>                    
-
-            </article>
-
-            <article class="post-content">
-
-                <img src="/images/post2.jpg" alt="" class="col-12">
-
-                    <h1 class="post-title">Certainty listening no behaviour existence assurance situation</h1>
-
-                    <ul class="post-info">
-                            <li>Criador</li>
-                            <li>Data</li>
-                            <li>Comentarios</li>
-                            <li>Visitas</li>
-                    </ul>
-
-                    <h2 class="post-description">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</h2>
-
-                    <a href="" class="read-more">Ler mais</a>                    
+                    <a href="/postagem/{{slug}}" class="read-more">Ler mais</a>                    
 
             </article>
 
-            <article class="post-content">
+            {{else}}
+                <mark><h5>Nenhuma postagem!</h5></mark>
+            {{/each}}
 
-                <img src="/images/post2.jpg" alt="" class="col-12">
-
-                    <h1 class="post-title">Certainty listening no behaviour existence assurance situation</h1>
-
-                    <ul class="post-info">
-                            <li>Criador</li>
-                            <li>Data</li>
-                            <li>Comentarios</li>
-                            <li>Visitas</li>
-                    </ul>
-
-                    <h2 class="post-description">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</h2>
-
-                    <a href="" class="read-more">Ler mais</a>                    
-
-            </article>
-
-            <article class="post-content">
-
-                <img src="/images/post2.jpg" alt="" class="col-12">
-
-                    <h1 class="post-title">Certainty listening no behaviour existence assurance situation</h1>
-
-                    <ul class="post-info">
-                            <li>Criador</li>
-                            <li>Data</li>
-                            <li>Comentarios</li>
-                            <li>Visitas</li>
-                    </ul>
-
-                    <h2 class="post-description">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</h2>
-
-                    <a href="" class="read-more">Ler mais</a>                    
-
-            </article>
-
-            <article class="post-content">
-
-                <img src="/images/post2.jpg" alt="" class="col-12">
-
-                    <h1 class="post-title">Certainty listening no behaviour existence assurance situation</h1>
-
-                    <ul class="post-info">
-                            <li>Criador</li>
-                            <li>Data</li>
-                            <li>Comentarios</li>
-                            <li>Visitas</li>
-                    </ul>
-
-                    <h2 class="post-description">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire</h2>
-
-                    <a href="" class="read-more">Ler mais</a>                    
-
-            </article>
 
         </section>
 
@@ -193,88 +139,42 @@
             <div class="aside-content our-pics">
                 <h2 class="orange-title">Our pics</h2>
 
-                <div class="aside-pic">
+                {{#each posts}}
+                    <div class="aside-pic">
 
-                    <div class="pic-img">
-                        <img src="/images/pics1.jpg" alt="" class="col-12">
-                        <button class="btn-pics btn-orange">Pothograph</button>
+                            <div class="pic-img">
+                                <img src="/files/{{image}}" alt="" class="col-12">
+                                <button class="btn-pics btn-orange">{{category.name}}</button>
+                            </div>
+        
+                            <h3 class="pic-title col-12">{{title}}</h3>
+
+                            <ul class="post-info col-8">
+                                    <li>Criador</li>
+                                    <li>Data</li>
+                                    <li>Comentarios</li>
+                                    <li>Visitas</li>
+                            </ul>
                     </div>
- 
-                    <h3 class="pic-title col-12">Certainty listening no behaviour existence assurance situation</h3>
 
-                    <ul class="post-info col-8">
-                            <li>Criador</li>
-                            <li>Data</li>
-                            <li>Comentarios</li>
-                            <li>Visitas</li>
-                    </ul>
-                </div>
+                {{else}}
 
-                <div class="aside-pic">
+                {{/each}}                        
 
-                    <div class="pic-img">
-                        <img src="/images/pics1.jpg" alt="" class="col-12">
-                        <button class="btn-pics btn-orange">Pothograph</button>
-                    </div>
- 
-                    <h3 class="pic-title col-12">Certainty listening no behaviour existence assurance situation</h3>
-
-                    <ul class="post-info col-8">
-                            <li>Criador</li>
-                            <li>Data</li>
-                            <li>Comentarios</li>
-                            <li>Visitas</li>
-                    </ul>
-                </div>
-
-                <div class="aside-pic">
-
-                    <div class="pic-img">
-                        <img src="/images/pics1.jpg" alt="" class="col-12">
-                        <button class="btn-pics btn-orange">Pothograph</button>
-                    </div>
- 
-                    <h3 class="pic-title col-12">Certainty listening no behaviour existence assurance situation</h3>
-
-                    <ul class="post-info col-8">
-                            <li>Criador</li>
-                            <li>Data</li>
-                            <li>Comentarios</li>
-                            <li>Visitas</li>
-                    </ul>
-                </div>
-
-                <div class="aside-pic">
-
-                    <div class="pic-img">
-                        <img src="/images/pics1.jpg" alt="" class="col-12">
-                        <button class="btn-pics btn-orange">Pothograph</button>
-                    </div>
- 
-                    <h3 class="pic-title col-12">Certainty listening no behaviour existence assurance situation</h3>
-
-                    <ul class="post-info col-8">
-                            <li>Criador</li>
-                            <li>Data</li>
-                            <li>Comentarios</li>
-                            <li>Visitas</li>
-                    </ul>
-                </div> 
-            </div>
 
             <div class="aside-content categorias">
                 <h2 class="orange-title">Categorias</h2>
 
+            {{#each categories}}
                 <ul class="aside-cate">
-                    <li class="cate-item"><a href="">Estilo de vida  <span class="cate-num">(3)</span></a></li>
-                    <li class="cate-item"><a href="">Estilo de vida  <span class="cate-num">(3)</span></a></li>
-                    <li class="cate-item"><a href="">Estilo de vida  <span class="cate-num">(3)</span></a></li>
-                    <li class="cate-item"><a href="">Estilo de vida  <span class="cate-num">(3)</span></a></li>
-                    <li class="cate-item"><a href="">Estilo de vida  <span class="cate-num">(3)</span></a></li>
-                    <li class="cate-item"><a href="">Estilo de vida  <span class="cate-num">(3)</span></a></li>
-                    
+                    <li class="cate-item"><a href="/categorias/{{slug}}">{{name}} <span class="cate-num">(3)</span></a></li>
                 </ul>
+            {{else}}
+
+            {{/each}}
             </div>
+
+
 
             <div class="aside-content random-post">
                 <h2 class="orange-title">Random post</h2>
