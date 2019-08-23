@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
+const passport = require('passport');
+require('./config/auth')(passport)
+
 // carregando diretorios estaticos
 const path = require('path');
 // carregando rotas
@@ -26,12 +29,17 @@ const app = express();
             resave: true,
             saveUninitialized: true
         }));
+    // passport 
+        app.use(passport.initialize());
+        app.use(passport.session());
         app.use(flash());
 
         app.use((req,res,next) => {
             // criando variaveis globais 
                 res.locals.success_msg = req.flash('success_msg');
                 res.locals.error_msg = req.flash('error_msg');
+                res.locals.error = req.flash('error');
+
                 next();
             });
 
